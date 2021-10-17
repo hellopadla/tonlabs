@@ -8,7 +8,7 @@ contract ToDoManager {
         uint32 timestamp;
         bool flag;
     }
-
+    
     int8 it = 0;
 
     mapping (int8 => task) public taskManager;
@@ -20,8 +20,8 @@ contract ToDoManager {
 		require(msg.pubkey() == tvm.pubkey(), 102);
 		tvm.accept();
 	}
-
-	modifier checkOwnerAndAccept {
+    
+    modifier checkOwnerAndAccept {
 		// Check that message was signed with contracts key.
 		require(msg.pubkey() == tvm.pubkey(), 102);
 		tvm.accept();
