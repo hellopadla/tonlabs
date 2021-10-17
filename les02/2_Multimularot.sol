@@ -25,6 +25,6 @@ contract Multimulator {
 	// Function that adds its argument to the state variable.
 	function multiply(uint value) public checkOwnerAndAccept {
 		require((value >= 1) && (value <= 10) , 101);
-        sum *= value;
+		sum *= value;
 	}
 }
